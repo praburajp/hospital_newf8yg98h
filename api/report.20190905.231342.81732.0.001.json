@@ -1,0 +1,428 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190905.231342.81732.0.001.json",
+    "dumpEventTime": "2019-09-05T23:13:42Z",
+    "dumpEventTimeStamp": "1567705422173",
+    "processId": 81732,
+    "cwd": "C:\\Users\\hp\\mahihospital\\api",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\\\node.exe",
+      "C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npm-cli.js",
+      "start"
+    ],
+    "nodejsVersion": "v12.6.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.6.0",
+      "v8": "7.5.288.22-node.14",
+      "uv": "1.30.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.6.0/node-v12.6.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.6.0/node-v12.6.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.6.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.17134",
+    "osVersion": "Windows 10 Home Single Language",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "speed": 2400,
+        "user": 2335421,
+        "nice": 0,
+        "sys": 2895281,
+        "idle": 11577953,
+        "irq": 238671
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "speed": 2400,
+        "user": 2335421,
+        "nice": 0,
+        "sys": 2895281,
+        "idle": 11577953,
+        "irq": 238671
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "speed": 2400,
+        "user": 2335421,
+        "nice": 0,
+        "sys": 2895281,
+        "idle": 11577953,
+        "irq": 238671
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "speed": 2400,
+        "user": 2335421,
+        "nice": 0,
+        "sys": 2895281,
+        "idle": 11577953,
+        "irq": 238671
+      }
+    ],
+    "host": "LAPTOP-3DM1N6B6"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff6b0a76db9",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0a7a72c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0a796d8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b6300b",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1348a1e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1330d6a",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b11c256c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b11ca49f",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b11c0733",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b11befc4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b11ddaa5",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0f93e0d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b13f170d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b13dbee9",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b135ef4c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b135ef4c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1365bbc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b13634f1",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b13630dc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b120de6c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b120cd86",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b1327be2",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b8719e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b87447",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b8640a",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b2c307",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0b86e63",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b0a4c8dc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6b185b4e8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ffacc524034",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ffacce93691",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 3194880,
+    "totalCommittedMemory": 3194880,
+    "usedMemory": 2505800,
+    "availableMemory": 2195902136,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261832,
+        "used": 31960,
+        "available": 229872
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047328,
+        "used": 1047312,
+        "available": 16
+      },
+      "old_space": {
+        "memorySize": 1191936,
+        "committedMemory": 1191936,
+        "capacity": 1043752,
+        "used": 1039248,
+        "available": 4504
+      },
+      "code_space": {
+        "memorySize": 425984,
+        "committedMemory": 425984,
+        "capacity": 152320,
+        "used": 152320,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 266240,
+        "committedMemory": 266240,
+        "capacity": 234960,
+        "used": 234960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047328,
+        "used": 0,
+        "available": 1047328
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 0.046,
+    "kernelCpuSeconds": 0.078,
+    "cpuConsumptionPercent": 12.4,
+    "maxRss": 17469440,
+    "pageFaults": {
+      "IORequired": 4464,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 6
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\hp\\mahihospital\\api",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "andriod": "C:\\Users\\hp\\.android",
+    "APPDATA": "C:\\Users\\hp\\AppData\\Roaming",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LAPTOP-3DM1N6B6",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "easyplussdk": "\"C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin\"",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\hp",
+    "LOCALAPPDATA": "C:\\Users\\hp\\AppData\\Local",
+    "LOGONSERVER": "\\\\LAPTOP-3DM1N6B6",
+    "NODE_EXE": "C:\\Program Files\\nodejs\\\\node.exe",
+    "NPM_CLI_JS": "C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npm-cli.js",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\hp\\OneDrive",
+    "OnlineServices": "Online Services",
+    "OS": "Windows_NT",
+    "Path": "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\lenovo\\easyplussdk\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\New folder\\Scripts\\;C:\\New folder\\;C:\\Program Files\\Java\\jdk-12\\bin;C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\hp\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\hp\\AppData\\Roaming\\npm",
+    "path1": "C:\\Program Files\\Java\\jdk1.8.0_191\\bin\\jdk1.8.0_191",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "platformcode": "KV",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "4e03",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Users\\hp\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "RegionCode": "APJ",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\hp\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\hp\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LAPTOP-3DM1N6B6",
+    "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-3DM1N6B6",
+    "USERNAME": "hp",
+    "USERPROFILE": "C:\\Users\\hp",
+    "windir": "C:\\WINDOWS",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.37.1",
+    "LANG": "en_US.UTF-8",
+    "COLORTERM": "truecolor"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll"
+  ]
+}

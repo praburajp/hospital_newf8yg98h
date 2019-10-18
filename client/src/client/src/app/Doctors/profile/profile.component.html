@@ -1,0 +1,16 @@
+<table class="table">  
+    <thead>  
+    <tr scope="row">  
+        <td>Doctor Name</td>  
+        <td>Experience</td> 
+        <td>Department</td>
+    </tr>  
+    </thead>  
+    <tbody>  
+        <tr scope="row" *ngFor="let doctor of doctors">  
+            <td>{{ doctor.FullName }}</td>  
+            <td>{{ doctor.Experience }}</td>  
+            <td>{{ doctor.Qualification2 }}</td> 
+        </tr>  
+    </tbody>  
+  </table>  

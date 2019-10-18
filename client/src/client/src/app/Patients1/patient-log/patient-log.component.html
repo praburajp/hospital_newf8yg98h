@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <form [formGroup]="angForm" novalidate>
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 style="color:blue; text-align: center">Patient Login</h4>
+            <hr>
+            <div class="form-group form-group-sm">
+              <label class="col-md-5">Patient ID</label>
+              <input class="form-control input-sm" type="number" formControlName="Patient_ID" #Patient_ID>
+            </div>
+            <div
+              *ngIf="angForm.controls['Patient_ID'].invalid && (angForm.controls['Patient_ID'].dirty || angForm.controls['Patient_ID'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="angForm.controls['Patient_ID'].errors.required">
+                Patient ID is required.
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-md-5">Password</label>
+              <input type="password" class="form-control input-sm" formControlName="Password" #Password />
+            </div>
+            <div
+              *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="angForm.controls['Password'].errors.required">
+                Password is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <button (click)="validatePatient(Patient_ID.value,Password.value)" type="submit" class="btn btn-primary"
+                [disabled]="angForm.pristine || angForm.invalid">
+                Login
+              </button>
+              <a href="/patient/create" type="submit" class="btn btn-primary">
+                Register
+              </a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      </div>
+    </div>
+  </form>
+</div>

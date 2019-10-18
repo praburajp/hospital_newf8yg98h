@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate sidebar-fixed">
+                <div class="sidebar-content">
+                    <div class="sidebar-category sidebar-default">
+                        <div class="category-content">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a routerLink="/lab/create" class="nav-link">
+                                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                                        Test Report
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/blood/donate" class="nav-link">
+                                        Blood Donation
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/about" class="nav-link">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/contact" class="nav-link">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="container-fluid">
+                <form [formGroup]="angForm" novalidate>
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Patient ID</label>
+                        <input type="number" class="form-control input-sm" formControlName="Patient_ID" #Patient_ID />
+                    </div>
+                    <div *ngIf="angForm.controls['Patient_ID'].invalid && (angForm.controls['Patient_ID'].dirty || angForm.controls['Patient_ID'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="angForm.controls['Patient_ID'].errors.required">
+                            Patient_ID is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button (click)="getrequest1(Patient_ID.value)" type="submit" class="btn btn-primary"
+                            [disabled]="angForm.pristine || angForm.invalid">
+                            View
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-5" *ngIf="show">
+            <table border="1">
+                <thead>
+                    <th>Patient_ID</th>
+                    <th>Lab_Request_ID</th>
+                    <th>Test Details</th>
+                    <th>Date</th>
+                </thead>
+                <tr scope="row">
+                    <td>{{ Patient_ID1 }}</td>
+                    <td>{{ Lab_Request_ID }}</td>
+                    <td>{{ Test1 }}</td>
+                    <td>{{ Date }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+    <tbody>  
+        <tr scope="row" *ngFor="let doctor of doctors">  
+            <td>{{ doctor.FullName }}</td>  
+            <td>{{ doctor.Qualification2 }}</td> 
+        </tr>  
+    </tbody>  
+  </table>  

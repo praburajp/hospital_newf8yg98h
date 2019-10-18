@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-md-auto">
+        <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate sidebar-fixed">
+            <div class="sidebar-content">
+                <div class="sidebar-category sidebar-default">
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a routerLink="/doctors" class="nav-link">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/profile" class="nav-link">
+                                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/prescription" class="nav-link">
+                                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                                        View Prescription
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/labtests" class="nav-link">
+                                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                                        Lab Tests
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/diagnosis" class="nav-link">
+                                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                                        Diagnosis Details
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/admin/login" class="nav-link">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <h4 style="color: blue">Add Prescription</h4>
+        <form [formGroup]="angForm" novalidate>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Patient ID</label>
+                        <input class="form-control input-sm" rows=7 cols="5" formControlName="PatientID" #PatientID>
+                    </div>
+                    <div *ngIf="angForm.controls['PatientID'].invalid && (angForm.controls['PatientID'].dirty || angForm.controls['PatientID'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="angForm.controls['PatientID'].errors.required">
+                            Patient ID is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Medicine1</label>
+                        <input type="text" class="form-control input-sm" formControlName="Medicine1" #Medicine1 />
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Quantity</label>
+                        <input type="number" class="form-control input-sm" formControlName="Quantity" #Quantity />
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Morning:</label>
+                        <input class="form-control input-sm" type="checkbox" value="Morning" formControlName="time1"
+                            #time1>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Afternoon:</label>
+                        <input class="form-control input-sm" type="checkbox" value="Afternoon" formControlName="time2"
+                            #time2>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Evening:</label>
+                        <input class="form-control input-sm" type="checkbox" value="Evening" formControlName="time3"
+                            #time3>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="form-group form-group-sm">
+                        <label class="col-md-4">Night:</label>
+                        <input class="form-control input-sm" type="checkbox" value="Night" formControlName="time4"
+                            #time4>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="text-align: center">
+                <button (click)="addPrescription(Patient_ID.value,Quantity.value,time1.value,time2.value,time3.value,time4.value)"
+                    type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

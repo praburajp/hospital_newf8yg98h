@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <form [formGroup]="angForm" novalidate>
+
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 style="color:blue; text-align: center">Admin Login</h4>
+                        <hr>
+                        <div class="form-group form-group-sm">
+                            <label class="col-md-5">Admin ID</label>
+                            <input class="form-control input-sm" type="text" formControlName="AdminID" #AdminID>
+                        </div>
+                        <div *ngIf="angForm.controls['AdminID'].invalid && (angForm.controls['AdminID'].dirty || angForm.controls['AdminID'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="angForm.controls['AdminID'].errors.required">
+                                Admin ID is required.
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="col-md-5">Password</label>
+                            <input type="password" class="form-control input-sm" formControlName="Password" #Password />
+                        </div>
+                        <div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="angForm.controls['Password'].errors.required">
+                                Password is required.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button (click)="validateAdmin(AdminID.value,Password.value)" type="submit"
+                                class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </form>
+</div>

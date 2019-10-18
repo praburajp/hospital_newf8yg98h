@@ -1,0 +1,171 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <a routerLink="/admin" class="btn btn-primary" style="color: #ffffff;">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="/doctor/add" class="btn btn-primary" style="color: #ffffff;">
+            Doctor
+        </a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="/add/pharmacist" class="btn btn-primary" style="color: #ffffff;">
+            Pharmacist
+        </a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="/admin/login" class="btn btn-primary" style="color: #ffffff;">
+            Logout
+        </a>
+    </li>
+</ul>
+<h4 style="color:blue">Add Lab-Technician</h4>
+<form [formGroup]="angForm" novalidate>
+    <div class="row">
+        <div class="col">
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Full Name</label>
+                <input type="text" class="form-control input-sm" formControlName="FullName" #FullName />
+            </div>
+            <div *ngIf="angForm.controls['FullName'].invalid && (angForm.controls['FullName'].dirty || angForm.controls['FullName'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['FullName'].errors.required">
+                    Full Name is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Mobile Number</label>
+                <input class="form-control input-sm" rows=7 cols="5" formControlName="MobileNumber" #MobileNumber>
+            </div>
+            <div *ngIf="angForm.controls['MobileNumber'].invalid && (angForm.controls['MobileNumber'].dirty || angForm.controls['MobileNumber'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['MobileNumber'].errors.required">
+                    Mobile Number is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Email</label>
+                <input type="email" class="form-control input-sm" formControlName="Email" #Email />
+            </div>
+            <div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty || angForm.controls['Email'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Email'].errors.required">
+                    Email is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Educatinal Qualification</label>
+                <select class="form-control input-sm custom-select custom-select-sm" formControlName="Qualification1"
+                    #Qualification1>
+                    <option value="B.Sc(Automated clinical chemistry)">B.Sc(Automated clinical chemistry)</option>
+                    <option value="B.sc(Biometry & Genetics)">B.sc(Biometry & Genetics)</option>
+                    <option value="B.sc(Clinical lab statistics)">B.sc(Clinical lab statistics)</option>
+                    <option value="B.sc(Instrumentation)">B.sc(Instrumentation)</option>
+                    <option value="B.sc(Medical lab science research methods)">B.sc(Medical lab science research
+                        methods)</option>
+                </select>
+            </div>
+            <div *ngIf="angForm.controls['Qualification1'].invalid && (angForm.controls['Qualification1'].dirty || angForm.controls['Qualification1'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Qualification1'].errors.required">
+                    Qualification is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Certificates(if any)</label>
+                <select class="form-control input-sm custom-select custom-select-sm" formControlName="Qualification2"
+                    #Qualification2>
+                    <option value="nil">--Nil--</option>
+                    <option value="Phlebotomy">Phlebotomy</option>
+                    <option value="Coagulation">Coagulation</option>
+                    <option value="Transfusions">Transfusions</option>
+                    <option value="Parasitology">Parasitology</option>
+                    <option value="Mycology">Mycology</option>
+                </select>
+            </div>
+            <div *ngIf="angForm.controls['Qualification2'].invalid && (angForm.controls['Qualification2'].dirty || angForm.controls['Qualification2'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Qualification2'].errors.required">
+                    Department is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Work Experience(in Years)</label>
+                <input type="number" class="form-control input-sm" formControlName="Experience" #Experience
+                    minimum="0" />
+            </div>
+            <div *ngIf="angForm.controls['Experience'].invalid && (angForm.controls['Experience'].dirty || angForm.controls['Experience'].touched || angForm.controls['Experience'].negative)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Experience'].errors.required">
+                    Experience is required.
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Country</label>
+                <select class="countries form-control input-sm" id="countryId" formControlName="Country" #Country >
+                        <option value="">Select Country</option>
+                    </select>
+            </div>
+            <div *ngIf="angForm.controls['Country'].invalid && (angForm.controls['Country'].dirty || angForm.controls['Country'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Country'].errors.required">
+                    Country is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">State</label>
+                <select class="states form-control input-sm" id="stateId" formControlName="State" #State>
+                    <option value="">Select State</option>
+                </select>
+            </div>
+            <div *ngIf="angForm.controls['State'].invalid && (angForm.controls['State'].dirty || angForm.controls['State'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['State'].errors.required">
+                    State is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">City</label>
+                <select class="cities form-control input-sm" id="cityId" formControlName="Address2" #Address2>
+                    <option value="">Select City</option>
+                </select>
+            </div>
+            <div *ngIf="angForm.controls['Address2'].invalid && (angForm.controls['Address2'].dirty || angForm.controls['Address2'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Address2'].errors.required">
+                    City is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-6">Address(Complete Address)</label>
+                <input type="text" class="form-control input-sm" formControlName="Address" #Address />
+            </div>
+            <div *ngIf="angForm.controls['Address'].invalid && (angForm.controls['Address'].dirty || angForm.controls['Address'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Address'].errors.required">
+                    Address is required.
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="col-md-4">Pincode</label>
+                <input type="text" class="form-control input-sm" formControlName="Pincode" #Pincode />
+            </div>
+            <div *ngIf="angForm.controls['Pincode'].invalid && (angForm.controls['Pincode'].dirty || angForm.controls['Pincode'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Pincode'].errors.required">
+                    Pincode is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <button
+                    (click)="addTechy(FullName.value, MobileNumber.value, Email.value,Qualification1.value,Qualification2.value,Experience.value,Address.value,Address2.value,Country.value,State.value,Pincode.value)"
+                    type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

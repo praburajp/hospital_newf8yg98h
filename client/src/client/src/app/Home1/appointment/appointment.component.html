@@ -1,0 +1,100 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-auto">
+            <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate sidebar-fixed">
+                <div class="sidebar-content">
+                    <div class="sidebar-category sidebar-default">
+                        <div class="category-content">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a routerLink="/appointment" class="nav-link">
+                                        Get Appointment
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/organ/donate" class="nav-link">
+                                        Organ Donation
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/blood/donate" class="nav-link">
+                                        Blood Donation
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/about" class="nav-link">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/contact" class="nav-link">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-10 ml-auto">
+            <nav class="navbar navbar-light">
+                <div class="navbar-brand" style="color: chocolate;padding: 15px;font-size: 30px;">
+                    Online Appointment System
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="../patient/create" style="color: chocolate;padding: 15px;">
+                            Don't have Patient ID!
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form [formGroup]="angForm">
+                <div class="container">
+                    <img src="assets/images/home1.jpg" alt="Notebook" style="width:100%;">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-6" style="position: relative;height:393px;width:100%;">
+                                <div class="form-group form-group-sm">
+                                    <label class="col-md-4">Patient ID</label>
+                                    <input type="text" class="form-control input-sm" formControlName="PatientID"
+                                        #PatientID>
+                                </div>
+                                <div *ngIf="angForm.controls['PatientID'].invalid && (angForm.controls['PatientID'].dirty || angForm.controls['PatientID'].touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="angForm.controls['PatientID'].errors.required">
+                                        Patient Id is required.
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group form-group-sm">
+                                    <label class="col-md-4">Select Date</label>
+                                    <input placeholder="Selected date" type="date" class="form-control input-sm"
+                                        formControlName="DOB" #DOB />
+                                </div>
+                                <div *ngIf="angForm.controls['DOB'].invalid && (angForm.controls['DOB'].dirty || angForm.controls['DOB'].touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="angForm.controls['DOB'].errors.required">
+                                        Date is required.
+                                    </div>
+                                </div>
+                                <div class="form-group" style="text-align: center">
+                                    <button
+                                        (click)="addProduct(PatientID.value, MobileNumber.value, Email.value,Password.value,DOB.value,Address.value,Address2.value,Country.value,State.value,Pincode.value)"
+                                        type="submit" class="btn btn-primary"
+                                        [disabled]="angForm.pristine || angForm.invalid">
+                                        Get Appointment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
